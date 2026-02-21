@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil · MaratonaTech</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* --- NOVAS CLASSES CRIADAS PELO ALUNO (exemplo resolvido) --- */
+        .perfil-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .perfil-card {
+            background: white;
+            border-radius: 2.5rem;
+            padding: 2rem;
+            flex: 1 1 300px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border: 2px solid #f7b731;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação bônus */
+        }
+
+        .perfil-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 40px rgba(247,183,49,0.3);
+        }
+
+        .foto-grande {
+            font-size: 6rem;
+            text-align: center;
+            background: #eef4ff;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid #f7b731;
+        }
+
+        .numero-peito {
+            background: #0b1f3b;
+            color: #f7b731;
+            padding: 0.3rem 1rem;
+            border-radius: 60px;
+            font-weight: 800;
+            display: inline-block;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+        }
+
+        .estatisticas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        .estat-item {
+            background: #f4f8ff;
+            border-radius: 1.8rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .estat-item:hover {
+            border-color: #f7b731;
+            background: white;
+        }
+
+        .estat-valor {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0b1f3b;
+            line-height: 1.2;
+        }
+
+        .estat-rotulo {
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .historico-lista {
+            background: #f4f8ff;
+            border-radius: 2rem;
+            padding: 1.5rem 2rem;
+            list-style: none;
+        }
+
+        .historico-lista li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #b0c4e9;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .historico-lista li:last-child {
+            border-bottom: none;
+        }
+
+        .medalha {
+            font-size: 1.8rem;
+        }
+
+        .meta-box {
+            background: linear-gradient(145deg, #f7b731 0%, #ffd966 100%);
+            border-radius: 3rem;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            color: #0b1f3b;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: 4px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .meta-box span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        /* --- fim das novas classes --- */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🏃 Maratona<span>Tech</span></div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="exercicio.html">Treino</a>
+            <a href="perfil.html" class="ativo">Perfil</a> <!-- link ativo -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Título da página -->
+        <h1 style="font-size: 2.5rem; color: #0b1f3b; margin-bottom: 0.5rem;">🏅 Meu Perfil</h1>
+        <p style="color: #2c3e50; margin-bottom: 2rem;">Área do atleta — informações pessoais e desempenho</p>
+
+        <!-- Container flex com card de foto + dados básicos -->
+        <div class="perfil-container">
+            <!-- Card esquerdo: foto e informações principais -->
+            <div class="perfil-card">
+                <div class="foto-grande">
+                    👩‍🏃‍♀️
+                </div>
+                <h2 style="font-size: 2rem; color: #0b1f3b; text-align: center;">Maria Silva</h2>
+                <div style="text-align: center;">
+                    <span class="numero-peito">🏷️ PEITO #1234</span>
+                </div>
+                <p style="text-align: center; margin: 1rem 0; font-size: 1.2rem;">
+                    📍 São Paulo - SP · 32 anos<br>
+                    <strong>Distância:</strong> 21km (Meia Maratona)
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                    <span style="background: #d4e0ff; padding: 0.3rem 1rem; border-radius: 60px;">🏃‍♀️ desde 2018</span>
+                    <span style="background: #d4e0ff; padding: 0.3rem 1rem; border-radius: 60px;">⏱️ faixa azul</span>
+                </div>
+            </div>
+
+            <!-- Card direito: poderia ser outra informação, mas vamos usar estatísticas fora pra ficar mais rico -->
+        </div>
+
+        <!-- GRADE DE ESTATÍSTICAS (nova classe) -->
+        <div class="estatisticas-grid">
+            <div class="estat-item">
+                <div class="estat-valor">245 km</div>
+                <div class="estat-rotulo">Total no mês</div>
+            </div>
+            <div class="estat-item">
+                <div class="estat-valor">5:20/km</div>
+                <div class="estat-rotulo">Melhor pace</div>
+            </div>
+            <div class="estat-item">
+                <div class="estat-valor">12</div>
+                <div class="estat-rotulo">Treinos no mês</div>
+            </div>
+            <div class="estat-item">
+                <div class="estat-valor">🏁 4º</div>
+                <div class="estat-rotulo">Ranking geral</div>
+            </div>
+        </div>
+
+        <!-- Histórico de provas (lista personalizada) -->
+        <section style="margin: 2.5rem 0;">
+            <h2 style="color: #0b1f3b; font-size: 2rem; margin-bottom: 1.5rem;">📋 Histórico de provas</h2>
+            <ul class="historico-lista">
+                <li>
+                    <span class="medalha">🥇</span>
+                    <span><strong>Maratona de São Paulo</strong> 2025 · 4h32min · 21km</span>
+                </li>
+                <li>
+                    <span class="medalha">🥈</span>
+                    <span><strong>Meia de Santos</strong> 2024 · 2h05min · 21km</span>
+                </li>
+                <li>
+                    <span class="medalha">🥉</span>
+                    <span><strong>10k da Praia</strong> 2023 · 52min · 10km</span>
+                </li>
+                <li>
+                    <span class="medalha">🎽</span>
+                    <span><strong>Corrida do Interior</strong> 2022 · 1h48min · 15km</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Meta pessoal (destaque) -->
+        <div class="meta-box">
+            <span>⭐</span>
+            "Quebrar as 4 horas na maratona de 2026 — faltam 32 minutos!"
+        </div>
+
+        <!-- Botão extra usando classe .btn já existente (apenas para demonstração) -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="#" class="btn primario" style="font-size: 1rem;">✏️ Editar perfil</a>
+            <a href="exercicio.html" class="btn secundario" style="background:#0b1f3b; color: white;">📚 Ver treinos</a>
+        </div>
+
+        <!-- Pequena nota sobre o exercício (opcional) -->
+        <p style="text-align: center; color: #3a4b66; font-style: italic; margin: 2rem 0;">
+            * Página criada como exercício — novas classes CSS: .perfil-container, .perfil-card, .foto-grande, .numero-peito, .estatisticas-grid, .estat-item, .historico-lista, .meta-box (mais de uma, conforme solicitado).
+        </p>
+    </main>
+
+    <footer>
+        <p>MaratonaTech 2026 • corra pelo seu objetivo • perfil do atleta</p>
+    </footer>
+</body>
+</html>
