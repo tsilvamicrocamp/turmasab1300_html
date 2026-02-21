@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro · MaratonaTech</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏃 Maratona<span>Tech</span></div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cadastro.html" class="ativo">Cadastro</a>
+            <a href="login.html">Login</a>
+            <a href="exercicio.html">Treino</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-card">
+            <h2>🏁 Inscreva-se</h2>
+            <p class="subtitulo">Preencha para garantir seu número de peito</p>
+
+            <form action="#" method="post">
+                <div class="grupo">
+                    <label>Nome completo</label>
+                    <input type="text" placeholder="Como aparece no documento" required>
+                </div>
+                <div class="grupo">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="voce@email.com" required>
+                </div>
+                <div class="grupo">
+                    <label>Data de nascimento</label>
+                    <input type="date" required>
+                </div>
+                <div class="grupo">
+                    <label>Equipe / clube (opcional)</label>
+                    <input type="text" placeholder="Ex: Corredores Livres">
+                </div>
+                <div class="grupo">
+                    <label>Senha</label>
+                    <input type="password" placeholder="Mínimo 6 caracteres" required>
+                </div>
+
+                <div class="grupo-check">
+                    <input type="checkbox" id="termos" checked>
+                    <label for="termos">Aceito os termos e condições da maratona</label>
+                </div>
+
+                <button type="submit" class="btn-form">Criar cadastro</button>
+            </form>
+
+            <p class="link-cadastro">Já tem cadastro? <a href="login.html">Entrar</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>MaratonaTech 2026 • corra pelo seu objetivo</p>
+    </footer>
+</body>
+</html>
